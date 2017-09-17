@@ -1,0 +1,232 @@
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #f9f9f9;
+	font-family: segoe ui;
+}
+
+
+
+/*===============main-block===================*/
+#main-block {
+	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	height: 100%;
+ 	background-color: #2b2f3e;
+ 	float: left;
+	width: 320px; 
+}
+
+.main-block-text {
+	margin: 0;
+	padding: 30px;
+	color: #535a69;
+}
+
+#main-block h1{
+	font-size: 46px;
+	font-weight: 100;
+}
+
+#main-block h2{
+	padding: 20px 30px;
+	font-weight: 400;
+}
+
+.back-red {
+	color: #ffffee;
+	background-color: #ff3753;
+}
+
+/*========panels block==================*/
+#panels-block{
+   margin-left: 360px;
+}
+
+.titles-style {
+	font-weight: 100;
+	font-size: 42px;
+	color: #565a69;
+}
+
+/*================items-block==================*/
+
+#items-block {
+    background-color: white;
+	width: 550px;
+	min-height: 60vh;
+	margin: 40px 20px 0px 0px;
+ 	float: left;
+ 	box-shadow: 1px 1px 5px 0px grey ;
+ 	padding-left: 35px;
+	display: inline-block;
+	padding-bottom: 50px;
+}
+
+#items-block input {
+	width: 350px;
+	height: 40px;
+	border-radius: 3px;
+	border: 1px solid #cccccc;
+	padding-left: 15px;
+	font-size: 18px;
+	margin-bottom: 10px;
+	color: #2b2f3e;
+	outline: none;
+}
+
+#items-block input::-moz-placeholder{
+	color: #b3b3b3;
+	font-family:  segoe ui;
+	font-size: 20px;
+	
+}
+ #items-block input::-webkit-input-placeholder { 
+	color: #b3b3b3; 
+	font-family:  segoe ui;
+	font-size: 20px;
+}
+
+#add-item-btn {
+	width: 150px;
+	height: 40px;
+	border-radius: 3px;
+	margin-left: 10px;
+	background-color: #27ccc0;
+	border:none;
+	font-size: 18px;
+	color: white;
+	font-weight: 400;
+	outline: none;
+	font-family: arial;
+}
+
+#item {
+	position: relative;
+	padding: 18px 0px;
+	margin-right: 20px;
+	border-bottom: 1px solid #f2f2f2;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+
+#item-name {
+	max-width: 350px;
+	display: inline-block;
+	white-space:  pre ;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-weight: 600;
+	color: #2b2f3e;
+
+}
+
+#item button {
+	width: 120px;
+	float: right;
+	margin-right: 5px;
+	border: 1px solid #ff3159;
+	height: 40px;
+	background-color: white;
+	color: #ff3159;
+	position: relative;
+	top: -6px;
+	border-radius: 3px;
+	font-size: 20px;
+	font-family: segoe ui;
+    outline: none;
+    position: relative; top: -4px;
+}
+
+#item button span {
+	position: relative;
+	top: -2px;
+}
+
+#comments-length {
+ 	margin: 10px;
+ 	border: none;
+ 	top: -5px;
+ 	position: relative;
+ 	background-color: #27ccc0;
+ 	color: white;
+ 	border-radius: 15px;
+ 	padding: 0px 10px 1px 10px;
+ 	font-weight: 800;
+ 	font-size: 16px;
+}
+
+#cheked-item {
+	height: 60px;
+	border: 3px solid #ff3753;
+	position: absolute;
+	left: -38px;
+	top: 0px;
+}
+
+/*=============comments block===================*/
+#comments-block {
+	width: 500px;
+	min-height: 20vh;
+	background-color: white;
+	margin: 40px 30px 0px 0px;
+	box-shadow: 1px 1px 5px 0px grey ;
+	padding-left: 20px;
+	display: inline-block;
+}
+
+#comments-block h1 {
+	margin-bottom: 30px;
+}
+
+#comments-block h1 span {
+	position: relative; 
+	top: 4px;
+}
+
+textarea {
+	resize: none;
+	margin-left: 20px ;
+	height: 80px;
+	width: 390px;
+	margin-bottom: 10px;
+	outline: none;
+}
+
+#avatar {
+ 	width: 60px;
+ 	height: 60px;
+ 	float: left;
+ 	background-color: #e6e6e6;
+ 	display: block;
+ 	margin-bottom: 10px;
+}
+
+#comment {
+	width: 475px;
+	display: inline-block;
+	margin: 10px 0px;
+	border-bottom: 1px solid #f2f2f2;
+
+}
+
+#comment-text {
+	position: relative;
+	top: -5px;
+	margin-left: 15px;
+	display: inline-block;
+	width: 400px;	
+	padding-bottom: 20px;
+	color: #666666;
+	font-size: 15px;
+}
+
+.odd #avatar {
+	background-color: #ff8a00;
+}
+.even #avatar {
+	background-color: #47568c;
+}

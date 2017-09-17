@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="UTF-8">
+  	<title>items-app</title>
+    	<link rel="stylesheet" href="./style.css">
+    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    	<script src="./app.js"></script>
+  </head>
+	
+  <body ng-controller="MyController"  >
+
+ 	<div id="main-block">
+ 		<h1 class="main-block-text ">Main</h1><br>
+ 		<h2 class="main-block-text back-red">Overview</h2>
+ 	</div>
+
+ 	<div id="panels-block">
+ 			<!--================================== items block===================================-->
+			<div id="items-block">
+				<h1 class="titles-style"> Items </h1>
+
+				<form>
+					<input type="text" placeholder="Type name here..." ng-model="name" required>
+					<button id="add-item-btn"  ng-click="addItem(name)"> Add new</button>
+				</form>
+
+				<div id="item" ng-repeat="item in items" ng-click="showComments()">
+					<div id="cheked-item"  ng-if="item.show"></div><!-- red line showed when item checked -->
+					<span id="item-name" title="item.name">{{item.name}}</span> 
+					<span id="comments-length">{{item.comments.length}}</span>
+					<button  ng-click="deleteItem()"><span>Delete</span></button>
+				</div>
+			</div>
+			<!--================================== comments block===================================-->
+			<div id="comments-block">
+				<h1 class="titles-style"> Comments <span>#</span> <span ng-if="showIndex">{{index+ 1}}</span> </h1>
+
+				<div id="comment" ng-repeat="comment in comments track by $index" ng-class="{even: !$even, odd: !$odd}">
+					<div id="avatar"></div>	<span id="comment-text"> {{comment}} </span>
+				</div>
+
+				<div>
+					<div id="avatar"></div>	
+					<textarea ng-disabled="!showIndex"
+					 		  ng-keypress="addComment(text)"
+					 		  ng-model="text" type="text"></textarea>
+				</div>
+			</div>
+	</div>
+
+  </body>
+</html>
